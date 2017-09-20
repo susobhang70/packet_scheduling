@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import copy
 from sys import exit
 from tabulate import tabulate
@@ -137,9 +139,6 @@ def main():
 	print "Total Rounds:", rounds
 	print tabulate(([i+1, iteration_count[i]] for i in range(len(iteration_count))),
 			headers=['Rounds', 'Iterations'], tablefmt='fancy_grid')
-	
-	# print tabulate(([i+1, final_answer[i]] for i in range(N)), headers=['I/P Ports', 'O/P Ports'], tablefmt='fancy_grid')
-
 
 if __name__ == '__main__':
 	main()
