@@ -89,7 +89,7 @@ def main():
 			print tabulate(([i+1, g[i], accept[i], a[i]] for i in range(N)),
 					headers=['O/P Ports', 'O/P Pointers', 'I/P Ports', 'I/P Pointers'], tablefmt='fancy_grid')
 
-			# randomly pick from the input port requests
+			# round robin pick from the input port requests
 			for i in range(N):
 				if accept[i]:
 					try:
@@ -106,7 +106,7 @@ def main():
 			print tabulate(([i+1, a[i], grant[i], g[i]] for i in range(N)),
 					headers=['I/P Ports', 'I/P Pointers', 'O/P Ports', 'O/P Pointers'], tablefmt='fancy_grid')
 
-			# randomly pick from the input port requests
+			# round robin pick from the input port requests
 			for i in range(N):
 				if grant[i]:
 					try:
